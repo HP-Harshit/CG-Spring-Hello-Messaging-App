@@ -30,4 +30,9 @@ public class HelloController {
     public String sayHelloWithName(@RequestParam(value = "name", defaultValue = "World") String name) {
         return "Hello " + name + " from BridgeLabz";
     }
+
+    @GetMapping("/param/{name}")
+    public String sayHelloWithPathVariable(@PathVariable String name) {
+        return "Hello " + name + " from BridgeLabz";
+    }
 }
